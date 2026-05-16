@@ -130,7 +130,7 @@ with tab1:
             
             prediction = model.predict(input_data)[0]
             
-            st.success(f"### 🏷️ Estimated Market Value: ₹ {prediction:,.2f}####")
+            st.success(f"#### 🏷️ Estimated Market Value: ₹ {prediction:,.2f}")
             st.balloons() 
 
 
