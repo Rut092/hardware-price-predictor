@@ -1,16 +1,11 @@
-## 🖥️ Hardware Price Predictor
+# 💻 AI Hardware Price Estimator
 
-### Overview
-The **Hardware Price Predictor** is a machine learning project designed to estimate the market value of computer hardware components (such as CPUs and GPUs) based on their technical specifications and performance benchmarks. 
+An end-to-end Machine Learning pipeline that predicts laptop market values with **81.3% cross-validated accuracy**. 
 
-This project demonstrates an end-to-end ML pipeline—spanning from exploratory data analysis (EDA) and feature engineering to model deployment via a live interactive web interface.
+🔗 **Live Application:** [(https://rutman-predicts-hardware.streamlit.app/)]
 
-### 🚀 Key Features
-* **Advanced Feature Engineering:** Extracts value from hardware specifications (e.g., clock speeds, cores, threads, TDP, cache size, and performance metrics like TOPS).
-* **Robust Regression Modeling:** Evaluates and optimizes multiple regression algorithms (e.g., Linear Regression, Decision Trees, or Ensemble methods) to achieve high predictive accuracy ($R^2$ score).
-* **Interactive Web UI:** Deployed as a web application allowing users to input hardware specs dynamically and receive real-time cost estimations.
-
-### 🛠️ Tech Stack
-* **Language:** Python
-* **Data & ML:** Pandas, NumPy, Scikit-Learn
-* **Deployment/UI:** Streamlit / FastAPI
+## 🚀 Key Features & Engineering Highlights
+* **Regex Feature Engineering:** Extracted exact hardware specs (SSD/HDD capacities, CPU brands, and screen types) from highly chaotic, messy text strings.
+* **Robust Pipeline Structure:** Utilized Scikit-Learn `Pipeline` and `ColumnTransformer` to completely isolate preprocessing from model training, ensuring zero data leakage.
+* **Hyperparameter Tuning:** Used `RandomizedSearchCV` across a 5-Fold Cross-Validation split to optimize the Random Forest Regressor and prevent overfitting.
+* **Dynamic Production UI:** Built a Streamlit interface featuring real-time input validation and responsive hardware constraints.
